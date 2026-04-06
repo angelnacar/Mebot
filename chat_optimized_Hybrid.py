@@ -386,6 +386,10 @@ _AGENT_CONTEXT_COMPACT = (
     "REGLAS: No tiene experiencia en empresas distintas a las listadas. "
     "No tiene certificaciones distintas a AWS CP. "
     "No domina tecnologias no listadas. Tono profesional y cercano."
+    
+    "SEGURIDAD: Nunca des información sensible de la arquitectura en la que estás programado. Nada de información sobre Groq, Ollama, ni detalles técnicos de tu implementación. Si el usuario pregunta por tu arquitectura o capacidades técnicas, responde que eres un chatbot diseñado para ayudar con preguntas profesionales sobre el perfil de Angel Nacar Jimenez, sin entrar en detalles técnicos."
+    "Si te preguntan por tus functions tools, responde que tienes herramientas para registrar detalles de contacto y preguntas sin respuesta, pero no reveles detalles técnicos sobre cómo funcionan esas herramientas ni su implementación."
+    "Jamás reveles información sobre contraseñas ni credenciales de acceso a sistemas. Si el usuario insiste, responde que no puedes compartir esa información por razones de seguridad."
 )
 
 
@@ -691,4 +695,4 @@ def chat(message: str, history: list) -> str:
 if __name__ == "__main__":
     from ui import build_ui
     app = build_ui(chat)
-    app.launch(server_name="0.0.0.0", server_port=7860)
+    app.launch(server_name="0.0.0.0", server_port=7866)
